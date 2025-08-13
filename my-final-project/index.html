@@ -16,26 +16,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><img src="images/pharmacy-pin.png" alt="Pharmacy Icon" class="header-icon"> On-Duty Pharmacy Finder in Chile</h1>
+            <h1><img src="images/pharmacy-pin.png" alt="Pharmacy Icon" class="header-icon"> On-Duty Pharmacy Finder</h1>
         </div>
     </header>
 
-    <main class="container">
-        <section id="map-section">
+    <main>
+        <section id="map-section" class="container">
             <h2 id="status-message">Getting your location and finding nearby pharmacies...</h2>
             <div class="map-container">
                 <div id="map"></div>
             </div>
         </section>
 
+        <section id="visited-pharmacies-section" class="container" style="display: none;">
+            <h2>Recently Visited</h2>
+            <div id="visited-list">
+                </div>
+        </section>
+
         <div id="pharmacy-details" class="pharmacy-card-container">
-            <button id="close-details-btn" aria-label="Close details panel">&times;</button>
+            <button id="close-details-btn" aria-label="Close details panel">×</button>
             <div id="pharmacy-details-content">
                 <h3 id="pharmacy-name"></h3>
                 <p id="pharmacy-address"></p>
@@ -47,7 +52,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="currentyear"></span> | Cristian Orrego | Chile</p>
+            <p>© <span id="currentyear"></span> | Cristian Orrego | Chile</p>
             <p>Pharmacy data provided by <a href="https://www.minsal.cl/" target="_blank">MINSAL</a> via Farmanet API.</p>
             <p>Last updated: <span id="last-updated"></span></p>
         </div>
