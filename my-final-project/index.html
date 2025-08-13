@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Duty Pharmacy Finder - Chile</title>
+    <meta name="description" content="Find on-duty pharmacies near you in Chile. Real-time data with an interactive map and directions.">
+    <meta name="author" content="Cristian Orrego">
+    <meta property="og:title" content="On-Duty Pharmacy Finder - Chile">
+    <meta property="og:description" content="Find on-duty pharmacies near you in Chile. Real-time data with an interactive map and directions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://0rregol.github.io/wdd330/my-final-project">
+    <meta property="og:image" content="https://0rregol.github.io/wdd330/my-final-project/images/og-image.jpg">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img src="images/pharmacy-pin.png" alt="Pharmacy Icon" class="header-icon"> On-Duty Pharmacy Finder in Chile</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="map-section">
+            <h2 id="status-message">Getting your location and finding nearby pharmacies...</h2>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <div id="pharmacy-details" class="pharmacy-card-container">
+            <button id="close-details-btn" aria-label="Close details panel">&times;</button>
+            <div id="pharmacy-details-content">
+                <h3 id="pharmacy-name"></h3>
+                <p id="pharmacy-address"></p>
+                <p id="pharmacy-hours"></p>
+                <a href="#" id="directions-btn" class="button-primary" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentyear"></span> | Cristian Orrego | Chile</p>
+            <p>Pharmacy data provided by <a href="https://www.minsal.cl/" target="_blank">MINSAL</a> via Farmanet API.</p>
+            <p>Last updated: <span id="last-updated"></span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
