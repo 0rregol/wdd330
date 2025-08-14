@@ -21,7 +21,7 @@ let currentPharmacy = null;
 
 
 function initMap() {
-    const initialCoords = [-33.45694, -70.64827]; // Santiago
+    const initialCoords = [-33.45694, -70.64827]; 
     UIElements.map = L.map('map').setView(initialCoords, 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
